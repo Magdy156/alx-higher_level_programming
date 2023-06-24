@@ -26,4 +26,10 @@ def roman_to_int(roman_string):
                 i += 1
             if roman_string[i-1] == 'I':
                 sum -= 2
+    for i in range(len(roman_string)):
+        if roman_string[i] == 'C':
+            if i == 0:
+                i += 1
+            if roman_string[i-1] == 'X':
+                sum -= 20
     return (sum)
