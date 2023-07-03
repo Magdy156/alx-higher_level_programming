@@ -4,7 +4,7 @@
 
 class Rectangle:
     """represent a rectangle"""
-    def __init__(self, width = 0, height = 0):
+    def __init__(self, width=0, height=0):
         """rectangle constructor
         Args:
             width (int): the width of the rec
@@ -12,12 +12,12 @@ class Rectangle:
         """
         self.width = width
         self.height = height
-    
+
     @property
     def width(self):
         """width getter and setter"""
         return self.__width
-    
+
     @width.setter
     def width(self, newVal):
         if not isinstance(newVal, int):
@@ -25,12 +25,12 @@ class Rectangle:
         if newVal < 0:
             raise ValueError('width must be >= 0')
         self.__width = newVal
-    
+
     @property
     def height(self):
         """height getter and setter"""
         return self.__height
-    
+
     @height.setter
     def height(self, newVal):
         if not isinstance(newVal, int):
