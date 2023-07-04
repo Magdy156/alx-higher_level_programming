@@ -101,6 +101,4 @@ class Rectangle:
         Args:
             size (int): the square width
         """
-        sqr = cls()
-        sqr.height = sqr.width = size
-        return (sqr)
+        return (cls(size, size))
