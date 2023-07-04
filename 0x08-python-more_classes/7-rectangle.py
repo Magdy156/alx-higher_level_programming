@@ -6,7 +6,7 @@ class Rectangle:
     """represent a rectangle"""
 
     number_of_instances = 0
-    print_symbol = '#'
+    print_symbol = "#"
 
     def __init__(self, width=0, height=0):
         """rectangle constructor
@@ -62,7 +62,7 @@ class Rectangle:
         rect = []
         for i in range(self.__height):
             for j in range(self.__width):
-                rect.append(str(Rectangle.print_symbol))
+                rect.append(str(self.print_symbol))
             if i != self.__height - 1:
                 rect.append("\n")
         return ("".join(rect))
