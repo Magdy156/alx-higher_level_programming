@@ -1,5 +1,4 @@
 #!/usr/bin/python3
-# 14-pascal_triangle.p
 """Defines a Pascal's Triangle function."""
 
 
