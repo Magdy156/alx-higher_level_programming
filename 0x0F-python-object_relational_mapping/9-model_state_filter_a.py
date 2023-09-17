@@ -1,6 +1,7 @@
 #!/usr/bin/python3
 """
-prints the first State object from the database hbtn_0e_6_usa
+lists all State objects 
+that contain the letter a from the database hbtn_0e_6_usa
 """
 from model_state import Base, State
 from sqlalchemy import (create_engine)
@@ -15,9 +16,6 @@ if __name__ == "__main__":
     Base.metadata.create_all(engine)
     Session = sessionmaker(bind=engine)
     session = Session()
-    fstate = session.query(State).first()
-    if fstate:
-        print(fstate.id, fstate.name, sep=": ")
-    else:
-        print('No Data')
-    session.close()
+    states = session.query(State).filter(State.name.like('%a%'))
+    for state in states:
+        print(f"{state.id}: {state.name}")
