@@ -18,3 +18,5 @@ if __name__ == "__main__":
     fstate = session.query(State).first()
     if fstate:
         print(fstate.id, fstate.name, sep=": ")
+    else:
+        print('No Data')
