@@ -18,7 +18,11 @@ if __name__ == "__main__":
         """SELECT cities.name FROM
         cities INNER JOIN states ON states.id=cities.state_id
         WHERE states.name=%s""", (sys.argv[4],))
-    for state in cur.fetchall():
-        print(state)
+    rows = cur.fetchall()
+    for state in rows:
+        if state != rows[len(rows) - 1]:
+            print(f"{state[0]}, ", end="")
+        else:
+            print(state[0])
     cur.close()
     db.close()
