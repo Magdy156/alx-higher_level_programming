@@ -14,7 +14,7 @@ if __name__ == "__main__":
         password=sys.argv[2],
         database=sys.argv[3])
     cur = db.cursor()
-    cur.execute("SELECT * FROM `states` WHERE name LIKE 'N%' ORDER BY id ASC")
+    cur.execute("SELECT * FROM `states` WHERE name LIKE BINARY 'N%';")
     for state in cur.fetchall():
         print(state)
     cur.close()
