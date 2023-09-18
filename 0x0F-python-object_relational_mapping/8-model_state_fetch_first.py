@@ -19,5 +19,5 @@ if __name__ == "__main__":
     if fstate:
         print(fstate.id, fstate.name, sep=": ")
     else:
-        print('No Data')
+        print('Nothing')
     session.close()
